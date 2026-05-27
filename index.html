@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priyanshi Borad — Creative Web Designer</title>
+  <link rel="icon" type="image/png" href="asstes/images/favicon_1779861068054.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="asstes/libs/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="asstes/css/style.css">
+</head>
+
+<body>
+
+  <div id="loader">
+    <div class="loader-wrapper">
+      <div class="loader-circle-wrap">
+        <div class="loader-circle circle-outer"></div>
+        <div class="loader-circle circle-inner"></div>
+        <div class="loader-logo-center">PB</div>
+      </div>
+      <div class="loader-info">
+        <div class="loader-text">LOADING PORTFOLIO</div>
+        <div class="loader-count" id="loader-count">00%</div>
+      </div>
+      <div class="loader-progress-bar">
+        <div class="loader-fill" style="width: 0%"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
+  <div id="progress-bar" style="width:0%"></div>
+
+  <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+  <nav>
+    <div class="nav-inner">
+      <div class="logo">PB.</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="asstes/images/cv/resume.pdf" target="_blank">CV</a></li>
+      </ul>
+      <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire
+        Me</button>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="nav-links">
+      <li><a href="#hero" onclick="toggleMenu()">Home</a></li>
+      <li><a href="#about" onclick="toggleMenu()">About</a></li>
+      <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+      <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+      <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      <li><a href="asstes/images/cv/resume.pdf" target="_blank" onclick="toggleMenu()">CV</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="grid-lines"></div>
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="orb orb3"></div>
+      <svg style="position:absolute;width:100%;height:100%;pointer-events:none;opacity:0.07" viewBox="0 0 1200 800"
+        preserveAspectRatio="xMidYMid slice">
+        <polygon points="100,150 200,50 300,150" fill="none" stroke="#a855f7" stroke-width="1">
+          <animateTransform attributeName="transform" type="rotate" from="0 200 100" to="360 200 100" dur="20s"
+            repeatCount="indefinite" />
+        </polygon>
+        <circle cx="900" cy="300" r="60" fill="none" stroke="#06b6d4" stroke-width="1">
+          <animate attributeName="r" values="60;72;60" dur="4s" repeatCount="indefinite" />
+        </circle>
+        <rect x="1000" y="100" width="80" height="80" fill="none" stroke="#3b82f6" stroke-width="1" rx="8">
+          <animateTransform attributeName="transform" type="rotate" from="0 1040 140" to="360 1040 140" dur="15s"
+            repeatCount="indefinite" />
+        </rect>
+        <polygon points="180,580 240,520 300,580 240,640" fill="none" stroke="#ec4899" stroke-width="1">
+          <animateTransform attributeName="transform" type="rotate" from="0 240 580" to="-360 240 580" dur="25s"
+            repeatCount="indefinite" />
+        </polygon>
+        <line x1="500" y1="0" x2="500" y2="800" stroke="#7c3aed" stroke-width="0.5" opacity="0.3" />
+        <line x1="700" y1="0" x2="700" y2="800" stroke="#06b6d4" stroke-width="0.5" opacity="0.2" />
+      </svg>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge"><span class="badge-dot"></span> Available for Freelance Work</div>
+      <h1 class="hero-name">
+        <span class="hero-name-line">Priyanshi</span>
+        <span class="hero-name-line accent">Borad</span>
+      </h1>
+      <p class="hero-subtitle">Creative <span class="typed-text" id="typed"></span><span class="cursor-blink">|</span>
+      </p>
+      <div class="hero-buttons">
+        <button class="btn-primary"
+          onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View Projects</button>
+        <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"><i
+            class="fa-regular fa-envelope" style="margin-right: 8px;"></i>Hire Me</button>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span style="font-size:0.7rem;letter-spacing:0.12em;color:var(--text3);font-family:var(--font-mono)">SCROLL</span>
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">Designing <span>Digital Experiences</span><br>That Matter</h2>
+      </div>
+      <div class="row g-4 align-items-start reveal reveal-delay-1 about-grid">
+        <div class="col-lg-4">
+          <div class="glass about-profile">
+            <div style="display:inline-block;position:relative;margin-bottom:1.5rem">
+              <div class="avatar-ring">
+                <div class="avatar-inner"><span class="avatar-letter">PB</span></div>
+              </div>
+              <!-- <div
+                style="position:absolute;bottom:8px;right:8px;width:18px;height:18px;border-radius:50%;background:var(--green);border:3px solid var(--bg2);box-shadow:0 0 12px rgba(16,185,129,0.6)">
+              </div> -->
+            </div>
+            <div class="name-tag">Priyanshi Borad</div>
+            <div class="role-tag">Web Designer</div>
+            <div class="location-tag"><i class="fa-solid fa-location-dot"
+                style="margin-right: 6px; color: var(--purple2);"></i>Surat, Gujarat, India</div>
+            <div class="status-row">
+              <div class="status-pill" style="background:rgba(124,58,237,0.08);border-color:rgba(124,58,237,0.2)">
+                <span style="font-size:0.78rem;color:var(--text2)">Availability</span>
+                <span style="font-size:0.75rem;color:var(--green);font-weight:500">● Open to Work</span>
+              </div>
+              <div class="status-pill" style="background:rgba(6,182,212,0.08);border-color:rgba(6,182,212,0.2)">
+                <span style="font-size:0.78rem;color:var(--text2)">Focus</span>
+                <span style="font-size:0.75rem;color:var(--cyan);font-weight:500">Web Designer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="about-info">
+            <p class="about-text">Hi, I'm <strong style="color:var(--purple2);font-weight:600">Priyanshi Borad</strong> —
+              a passionate <span>Creative Web Designer</span> based in Gujarat, India. I design modern, responsive, and
+              visually engaging websites that combine creativity with clean user-focused layouts.</p>
+            <p class="about-text" style="margin-bottom:1.75rem">I specialise in crafting premium website interfaces,
+              landing pages, portfolio websites, and interactive web experiences with a strong focus on aesthetics,
+              usability, and performance. My goal is to transform ideas into impactful digital designs that leave a
+              lasting impression.</p>
+            <div style="margin-bottom:2.25rem; display:flex; gap:1rem; justify-content:flex-start;">
+              <a href="asstes/images/cv/resume.pdf" target="_blank" class="btn-resume primary">
+                <i class="fa-solid fa-file-pdf"></i> View Resume / CV
+              </a>
+            </div>
+            <div class="row g-3">
+              <div class="col-md-4 col-sm-6">
+                <div class="stat-card">
+                  <div class="stat-num" data-target="25">0+</div>
+                  <div class="stat-label">Projects Done</div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="stat-card">
+                  <div class="stat-num" data-target="1">0+</div>
+                  <div class="stat-label">Yrs Experience</div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <div class="stat-card">
+                  <div class="stat-num" data-target="10">0+</div>
+                  <div class="stat-label">Technologies</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" style="background:var(--bg2)">
+    <div class="container">
+      <div class="reveal" style="text-align:center;margin-bottom:3.5rem">
+        <div class="section-label">Technical Skills</div>
+        <h2 class="section-title">Tools & <span>Technologies</span></h2>
+        <p class="section-sub" style="margin:0 auto">Mastering the full spectrum of modern web design and development
+          tools to deliver pixel-perfect results.</p>
+      </div>
+      <div class="row g-4 reveal" id="skillsGrid"></div>
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+  <section id="services" style="background:var(--bg2)">
+    <div class="container">
+      <div class="reveal" style="text-align:center;margin-bottom:3.5rem">
+        <div class="section-label">What I Do</div>
+        <h2 class="section-title">Services I <span>Offer</span></h2>
+        <p class="section-sub" style="margin:0 auto">End-to-end design and development solutions crafted with precision,
+          creativity, and deep technical expertise.</p>
+      </div>
+      <div class="row g-4 reveal" id="servicesGrid"></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">Portfolio</div>
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <p class="section-sub">A curated selection of my finest work — from concept to pixel-perfect execution.</p>
+      </div>
+      <div class="row g-4 reveal" id="projectsGrid"></div>
+      <div class="reveal" style="text-align:center;margin-top:3.5rem">
+        <a href="projects.html" class="btn-primary" style="text-decoration:none;display:inline-block">View More Projects
+          <i class="fa-solid fa-arrow-right" style="margin-left:8px"></i></a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Let's Build Something <span>Amazing</span></h2>
+        <p class="section-sub">Have a project in mind? Let's collaborate and create something extraordinary together.
+        </p>
+      </div>
+      <div class="row g-4 align-items-start reveal reveal-delay-1">
+        <div class="col-lg-5">
+          <div class="contact-info-card">
+            <div class="ci-title">Say Hello 👋</div>
+            <div class="ci-sub">Whether you have a project inquiry, want to discuss collaboration, or just want to connect
+              — my inbox is always open.</div>
+            <div class="ci-item">
+              <div class="ci-icon" style="background:rgba(124,58,237,0.15)"><i class="fa-regular fa-envelope"
+                  style="color:var(--purple2)"></i></div>
+              <div>
+                <div class="ci-detail">priyanshiborad07@gmail.com</div>
+                <div class="ci-label">Email Address</div>
+              </div>
+            </div>
+            <a class="ci-item" href="https://www.linkedin.com/in/priyanshi-borad-60180935a/" target="_blank" style="text-decoration:none; color:inherit;">
+              <div class="ci-icon" style="background:rgba(59,130,246,0.15)"><i class="fa-brands fa-linkedin-in"
+                  style="color:var(--blue)"></i></div>
+              <div>
+                <div class="ci-detail">Priyanshi Borad</div>
+                <div class="ci-label">LinkedIn</div>
+              </div>
+            </a>
+            <div class="ci-item">
+              <div class="ci-icon" style="background:rgba(6,182,212,0.15)"><i class="fa-solid fa-location-dot"
+                  style="color:var(--cyan)"></i></div>
+              <div>
+                <div class="ci-detail">Surat, Gujarat, India</div>
+                <div class="ci-label">Location</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <!-- ✅ Web3Forms: Unlimited free submissions -->
+          <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <!-- 🔑 Replace YOUR_ACCESS_KEY_HERE with key from web3forms.com -->
+            <input type="hidden" name="access_key" value="8a056a88-9a97-4ccb-99a7-dd63257f3eb1">
+            <input type="hidden" name="subject" value="">
+            <input type="hidden" name="from_name" value="Portfolio Contact Form">
+            <input type="checkbox" name="botcheck" style="display:none">
+            <div class="contact-form-card">
+              <div style="margin-bottom:1.75rem">
+                <div style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:0.3rem">Send a Message</div>
+                <div style="color:var(--text3);font-size:0.8rem;font-weight:300">Typically respond within 24 hours</div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Your Name</label>
+                <input class="form-input" id="name" name="name" type="text" placeholder="Enter your full name" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Address</label>
+                <input class="form-input" id="email" name="email" type="email" placeholder="hello@yourcompany.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Subject</label>
+                <input class="form-input" id="subject" name="subject" type="text" placeholder="Project inquiry..." required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Message</label>
+                <textarea class="form-input" id="message" name="message" placeholder="Tell me about your project, goals, and timeline..." required></textarea>
+              </div>
+              <button class="btn-send d-flex align-items-center justify-content-center gap-2" id="submitBtn">Send Message <i class="fa-solid fa-arrow-right"></i></button>
+              <!-- Success / Error messages -->
+              <div id="formSuccess" style="display:none;margin-top:16px;padding:14px 20px;background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);border-radius:10px;color:#4ade80;font-size:14px;text-align:center;">
+                <div class="d-flex align-items-center justify-content-center gap-2">
+                  <i class="fa fa-circle-check me-2"></i>Your message was sent successfully! I'll get back to you soon.
+                </div>
+              </div>
+              <div id="formError" style="display:none;margin-top:16px;padding:14px 20px;background:rgba(248,113,113,.12);border:1px solid rgba(248,113,113,.3);border-radius:10px;color:#f87171;font-size:14px;text-align:center;">
+                <div class="d-flex align-items-center justify-content-center gap-2">
+                  <i class="fa fa-circle-exclamation me-2"></i>Oops! Something went wrong. Please try again or email me directly.
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Priyanshi Borad</div>
+        <div class="footer-copy">© 2026 All rights reserved · Crafted with ♥ in Gujarat, India</div>
+      </div>
+      <div class="footer-socials d-md-block d-none">
+        <a class="footer-social" href="https://www.linkedin.com/in/priyanshi-borad-60180935a/" target="_blank"
+          title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a> 
+      </div>
+    </div>
+  </footer>
+
+  <script src="asstes/libs/jquery/jquery-4.0.0.min.js"></script>
+  <script src="asstes/libs/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="asstes/js/script.js"></script>
+  <!-- ✅ Contact Form Submit Handler (Web3Forms) -->
+  <script>
+    const contactForm = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formSuccess = document.getElementById('formSuccess');
+    const formError = document.getElementById('formError');
+
+    contactForm.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin me-2"></i>Sending...';
+      formSuccess.style.display = 'none';
+      formError.style.display = 'none';
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { 'Accept': 'application/json' }
+        });
+        const data = await response.json();
+
+        if (response.ok && data.success) {
+          formSuccess.style.display = 'block';
+          contactForm.reset();
+        } else {
+          formError.style.display = 'block';
+        }
+      } catch (err) {
+        formError.style.display = 'block';
+      }
+
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = '<i class="fa fa-paper-plane me-2"></i>Send Message';
+    });
+  </script>
+</body>
+
+</html>

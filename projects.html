@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Projects — Priyanshi Borad</title>
+  <link rel="icon" type="image/png" href="asstes/images/favicon_1779861068054.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="asstes/libs/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="asstes/css/style.css">
+</head>
+
+<body class="projects-page">
+
+  <div id="loader">
+    <div class="loader-wrapper">
+      <div class="loader-circle-wrap">
+        <div class="loader-circle circle-outer"></div>
+        <div class="loader-circle circle-inner"></div>
+        <div class="loader-logo-center">PB</div>
+      </div>
+      <div class="loader-info">
+        <div class="loader-text">LOADING PROJECTS</div>
+        <div class="loader-count" id="loader-count">00%</div>
+      </div>
+      <div class="loader-progress-bar">
+        <div class="loader-fill" style="width: 0%"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
+  <div id="progress-bar" style="width:0%"></div>
+
+  <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo" style="text-decoration:none">PB.</a>
+      <ul class="nav-links">
+        <li><a href="index.html"><i class="fa-solid fa-arrow-left me-2"></i> Back to Home</a></li>
+        <li><a href="asstes/images/cv/resume.pdf" target="_blank">CV</a></li>
+      </ul>
+      <button class="nav-cta" onclick="window.location.href='index.html#contact'">Hire Me</button>
+    </div>
+  </nav>
+
+  <!-- PROJECTS -->
+  <section id="projects" style="padding-top: 8rem; min-height: 85vh;">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">Portfolio</div>
+        <h2 class="section-title">All Featured <span>Projects</span></h2>
+        <p class="section-sub">A complete archive of my design and front-end development work.</p>
+      </div>
+      <div class="row g-4 reveal" id="allProjectsGrid"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Priyanshi Borad</div>
+        <div class="footer-copy">© 2025 All rights reserved · Crafted with ♥ in Gujarat, India</div>
+      </div>
+      <div class="footer-socials d-md-block d-none">
+        <a class="footer-social" href="https://www.linkedin.com/in/priyanshi-borad-60180935a/" target="_blank"
+          title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer> 
+  <script src="asstes/libs/jquery/jquery-4.0.0.min.js"></script>
+  <script src="asstes/libs/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="asstes/js/script.js"></script>
+</body>
+
+</html>
